@@ -1,4 +1,4 @@
-# marvel-cli
+# marvelcli
 
 November 2020
 
