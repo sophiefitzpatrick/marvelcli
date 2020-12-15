@@ -2,7 +2,7 @@
 
 November 2020
 
-The beginning of a CLI wrapper for Marvelapp
+A CLI wrapper for Marvelapp (https://marvelapp.com)
 
 The wrapper will enable you to interact with your Marvel
 account from the comfort of your command line.
@@ -18,5 +18,3 @@ already set up here: https://marvelapp.com/oauth/devtoken
 To create a project:
 
 	marvel-cli create-project -n Rua -p floof -a [your access token]
-
-![Screenshot](../assets/create-project.png)

@@ -1,10 +1,12 @@
+#!/usr/bin/env python3
+
 import sys
 import click
 import requests
 import json
 
 @click.group()
-def main(args=None):
+def marvelcli(args=None):
     """A CLI wrapper for Marvelapp
 
 	The wrapper will enable you to interact with your Marvel
@@ -22,7 +24,7 @@ BASE_URL = 'https://marvelapp.com/graphql'
 
 @click.option('-p', '--pk', help='Pk of the project you want to delete')
 @click.option('-a', '--auth', help='Auth your request')
-@main.command()
+@marvelcli.command()
 def delete_project(pk: str, auth: str):
 	"""Delete a project"""
 	params = {
@@ -59,7 +61,7 @@ def delete_project(pk: str, auth: str):
 @click.option('-n', '--name', help='Name of project')
 @click.option('-p', '--password', help='Project password')
 @click.option('-a', '--auth', help='Auth your request')
-@main.command()
+@marvelcli.command()
 def create_project(name: str, password: str, auth: str):
 	"""Create a new project"""
 	params = {
@@ -98,7 +100,7 @@ def create_project(name: str, password: str, auth: str):
 		print('"%s" has been successfully created in your Marvel account' % name)
 
 @click.option('-a', '--auth', help='Auth your request')
-@main.command()
+@marvelcli.command()
 def personal_projects(auth: str):
 	"""List all projects owned by you"""
 	if auth:
@@ -137,4 +139,4 @@ def personal_projects(auth: str):
 		print(url)
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(marvelcli())
