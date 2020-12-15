@@ -1,35 +1,3 @@
-# from setuptools import setup, find_packages
-
-# setup(
-#     name='marvelcli',
-#     version='0.1',
-#     packages=find_packages(),
-#     include_package_data=True,
-#     install_requires=[
-#         'Click',
-#     ],
-#     entry_points='''
-#         [console_scripts]
-#         marvelcli=marvelcli.scripts.marvelcli:cli
-#     ''',
-# )
-
-from setuptools import setup
-
-setup(
-    name='marvelapp-cli',
-    version='0.1',
-    py_modules=['marvelcli'],
-    install_requires=[
-        'Click',
-    ],
-    entry_points='''
-        [console_scripts]
-        marvelcli=marvelcli:marvelcli
-    ''',
-)
-
-
 import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
