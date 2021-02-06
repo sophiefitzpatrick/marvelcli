@@ -53,3 +53,4 @@ You can find out how to use each command with:
 2. Group the commands
 3. Last Active on `about-user` needs to be timezone specific and more accurate
 4. Add Comment, Screen, Section, UT commands
+5. A full QA test
