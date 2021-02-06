@@ -19,7 +19,7 @@ To create a project:
 
 	marvelcli create-project -n Rua -p floof -a [your access token]
 
-## Commands available
+## Commands available:
 
 You can find out how to use each command with:
 
@@ -46,3 +46,10 @@ You can find out how to use each command with:
 	update-account-password      Update your account password
 	update-group-name            Update a group name
 	update-user                  Update your email, username and occuption
+
+## TODO:
+
+1. Auth the entire session
+2. Group the commands
+3. Last Active on `about-user` needs to be timezone specific and more accurate
+4. Add Comment, Screen, Section, UT commands
