@@ -11,8 +11,11 @@ setuptools.setup(
     description="A CLI wrapper for Marvelapp",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/sophiefitzpatrick/marvelcli",
+    url="https://github.com/sophiefitzpatrick/marvelcli/archive/v_0.0.2.tar.gz",
     packages=setuptools.find_packages(),
+    install_requires=[
+        'requests'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

@@ -11,11 +11,8 @@ your access token.
 You can generate a new one or find the one you have
 already set up here: https://marvelapp.com/oauth/devtoken
 
-## Getting Set Up:
+## Getting started:
 
-Make sure you have requests installed, `pip install requests`
-
-Then:
 `pip install marvelapp-cli==0.0.1`
 
 https://pypi.org/project/marvelapp-cli/0.0.1/#description
@@ -54,10 +51,8 @@ You can find out how to use each command with:
 	update-group-name            Update a group name
 	update-user                  Update your email, username and occuption
 
-## TODO:
+## Coming soon:
 
 1. Auth the entire session
-2. Group the commands
-3. Last Active on `about-user` needs to be timezone specific and more accurate
-4. Add Comment, Screen, Section, UT commands
-5. A full QA test
+2. Command grouping
+3. Comment, screen, usertest commands
