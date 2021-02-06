@@ -13,9 +13,9 @@ already set up here: https://marvelapp.com/oauth/devtoken
 
 ## Getting started:
 
-`pip install marvelapp-cli==0.0.1`
+`pip install marvelapp-cli`
 
-https://pypi.org/project/marvelapp-cli/0.0.1/#description
+https://pypi.org/project/marvelapp-cli/
 
 ## Example:
 
