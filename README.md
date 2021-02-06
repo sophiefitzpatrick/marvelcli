@@ -25,8 +25,8 @@ You can find out how to use each command with:
 
 	marvelcli [command name] --help
 
+	Command Name:                Command Use:
 
-	Command Name                 Command Use
 	about-user                   User statistics
 	add-collabs-to-project       Add collaborators to a project
 	add-groups-to-project        Add groups to a project
