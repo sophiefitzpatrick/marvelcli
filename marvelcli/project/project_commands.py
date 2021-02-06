@@ -19,7 +19,7 @@ def delete_project(project_pk: str, auth: str):
 		else:
 			click.echo('\n"%s" has been successfully deleted from your Marvel account\n' % pk)
 	else:
-		click.echo("\nTry 'marvelcli delete_project -h' to make sure you are not missing any args.\n")
+		click.echo("\nTry 'marvelcli delete_project --help' to make sure you are not missing any args.\n")
 
 @click.option('-p', '--project-pk', type=int, help='Pk of the project you want to add groups to')
 @click.option('-g', '--group-pk', type=int, multiple=True, help='Use this flag for each group you want added to your project')
