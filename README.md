@@ -13,6 +13,15 @@ your access token.
 You can generate a new one or find the one you have
 already set up here: https://marvelapp.com/oauth/devtoken
 
+## Getting Set Up:
+
+Make sure you have requests installed, `pip install requests`
+
+Then:
+`pip install marvelapp-cli==0.0.1`
+
+https://pypi.org/project/marvelapp-cli/0.0.1/#description
+
 ## Example:
 
 To create a project:
