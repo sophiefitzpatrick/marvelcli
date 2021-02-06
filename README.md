@@ -25,10 +25,13 @@ You can find out how to use each command with:
 
 	marvelcli [command name] --help
 
+
+	Command Name                 Command Use
 	about-user                   User statistics
 	add-collabs-to-project       Add collaborators to a project
 	add-groups-to-project        Add groups to a project
 	add-members-to-group         Add members to a group
+	create-folder                Create a folder
 	create-group                 Create a group
 	create-project               Create a new project
 	delete-groups                Delete groups
