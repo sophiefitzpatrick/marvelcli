@@ -7,7 +7,7 @@ from marvelcli.group import group_queries
 @click.option('-a', '--auth', type=str, help='Auth your request')
 @click.command()
 def delete_groups(group_pk: list, auth: str):
-	"""Delete groups"""
+	"""Delete a list of groups"""
 	params = {'groupPks': group_pk}
 	query = group_queries.delete_groups_query
 	r, json_data = utils.make_request(auth, query, params)
@@ -41,7 +41,7 @@ def create_group(name: str, auth: str):
 		else:
 			click.echo('\nThe group "%s" has been successfully created in your Marvel account\n' % name)
 	else:
-		click.echo("\nTry 'marvelcli create-group -h' to make sure you are not missing any args.\n")
+		click.echo("\nTry 'marvelcli create-group --help' to make sure you are not missing any args.\n")
 
 @click.option('-g', '--group-pk', type=int, help='Pk of the group you want to add members to')
 @click.option('-e', '--email', type=str, multiple=True, help='Use this flag for each email address you want added to your group')
@@ -115,4 +115,4 @@ def update_group_name(group_pk: int, name: str, auth: str):
 		else:
 			click.echo("\nThe name of the group was updated successfully to '%s'\n" % name)
 	else:
-		click.echo("\nTry 'marvelcli update_group_name -h' to make sure you are not missing any args.\n")
+		click.echo("\nTry 'marvelcli update_group_name --help' to make sure you are not missing any args.\n")

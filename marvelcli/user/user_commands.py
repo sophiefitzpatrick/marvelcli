@@ -37,7 +37,7 @@ def update_user(password: str, occupation: str, email: str, username: str, auth:
 		else:
 			click.echo("\nYour account updated successfully!\n")
 	else:
-		click.echo("\nTry 'marvelcli update_user -h' to make sure you are not missing any args.\n")
+		click.echo("\nTry 'marvelcli update_user --help' to make sure you are not missing any args.\n")
 
 @click.option('-a', '--auth', help='Auth your request')
 @click.command()

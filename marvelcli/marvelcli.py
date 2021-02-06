@@ -51,5 +51,9 @@ marvelcli.add_command(group_commands.add_members_to_group)
 marvelcli.add_command(group_commands.remove_members_from_group)
 marvelcli.add_command(group_commands.update_group_name)
 
+# Folder - limited by the API
+marvelcli.add_command(folder_commands.create_folder)
+
+
 if __name__ == "__main__":
     marvelcli()
