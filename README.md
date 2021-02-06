@@ -1,6 +1,6 @@
 # marvelcli
 
-November 2020
+January 2021
 
 A CLI wrapper for Marvelapp (https://marvelapp.com)
 
