@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="marvelapp-cli",
-    version="0.0.1",
+    version="0.0.2",
     author="Sophie Fitzpatrick",
     author_email="sophierfitzpatrick@gmail.com",
     description="A CLI wrapper for Marvelapp",

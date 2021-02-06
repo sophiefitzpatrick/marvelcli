@@ -1,7 +1,5 @@
 # marvelcli
 
-January 2021
-
 A CLI wrapper for Marvelapp (https://marvelapp.com)
 
 The wrapper will enable you to interact with your Marvel
