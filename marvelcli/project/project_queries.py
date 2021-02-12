@@ -108,3 +108,21 @@ remove_groups_from_project_query = '''
     }
 '''
 
+bulk_transfer_project_query = '''
+    mutation bulkTransferProjects($userEmail: String!, $projectPks: [Int!]!) {
+        bulkTransferProjects(input: {userEmail: $userEmail, projectPks: $projectPks}) {
+            ok
+            succeeded
+            failed {
+                projectPk
+                message
+                code
+            }
+            error {
+                message
+                code
+                userEmail
+            }
+        }
+    }
+'''

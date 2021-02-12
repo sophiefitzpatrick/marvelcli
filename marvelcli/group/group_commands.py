@@ -1,7 +1,7 @@
 import click
 
-from marvelcli import utils
-from marvelcli.group import group_queries
+import utils
+from group import group_queries
 
 @click.option('-g', '--group-pk', type=int, multiple=True, help='Use this flag for each group to be deleted')
 @click.option('-a', '--auth', type=str, help='Auth your request')

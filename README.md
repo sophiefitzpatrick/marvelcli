@@ -21,7 +21,7 @@ https://pypi.org/project/marvelapp-cli/
 
 To create a project:
 
-	marvelcli create-project -n Rua -p floof -a [your access token]
+	marvelcli create-project --name Rua --password floof --auth [your access token]
 
 ## Commands available:
 

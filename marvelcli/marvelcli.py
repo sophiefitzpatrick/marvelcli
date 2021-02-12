@@ -3,12 +3,11 @@ import click
 import json
 import datetime
 
-from marvelcli import utils
-from marvelcli.user import user_commands
-from marvelcli.workspace import workspace_commands
-from marvelcli.project import project_commands
-from marvelcli.folder import folder_commands
-from marvelcli.group import group_commands
+from user import user_commands
+from workspace import workspace_commands
+from project import project_commands
+from folder import folder_commands
+from group import group_commands
 
 @click.group()
 def marvelcli(args=None):
@@ -43,6 +42,7 @@ marvelcli.add_command(project_commands.remove_groups_from_project)
 marvelcli.add_command(project_commands.add_collabs_to_project)
 marvelcli.add_command(project_commands.remove_collabs_from_project)
 marvelcli.add_command(project_commands.get_personal_projects)
+marvelcli.add_command(project_commands.bulk_transfer_projects)
 
 # Group
 marvelcli.add_command(group_commands.delete_groups)
