@@ -1,8 +1,8 @@
 import click
 import datetime
 
-import utils
-from workspace import workspace_queries
+from marvelcli import utils
+from marvelcli.workspace import workspace_queries
 
 @click.option('-e', '--email', type=str, multiple=True, help='Use this flag for each email address you want invited to your workspace')
 @click.option('-a', '--auth', type=str, help='Auth your request')

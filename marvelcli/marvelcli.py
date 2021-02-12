@@ -3,11 +3,12 @@ import click
 import json
 import datetime
 
-from user import user_commands
-from workspace import workspace_commands
-from project import project_commands
-from folder import folder_commands
-from group import group_commands
+from marvelcli import utils
+from marvelcli.user import user_commands
+from marvelcli.workspace import workspace_commands
+from marvelcli.project import project_commands
+from marvelcli.folder import folder_commands
+from marvelcli.group import group_commands
 
 @click.group()
 def marvelcli(args=None):

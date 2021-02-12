@@ -1,8 +1,8 @@
 import click
 import datetime
 
-import utils
-from user import user_queries
+from marvelcli import utils
+from marvelcli.user import user_queries
 
 @click.option('-o', '--old-password', type=str, help='Your old account password')
 @click.option('-n', '--new-password', type=str, help='Your new account password')
