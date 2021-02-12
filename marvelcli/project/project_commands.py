@@ -161,3 +161,28 @@ def get_personal_projects(auth: str):
 
 	for url in urls:
 		click.echo(url)
+
+@click.option('-p', '--project-pk', type=int, multiple=True, help='Use this flag for each project pk you want transferred')
+@click.option('-e', '--email', type=str, help='The email of the person recieving the projects, make sure they are in the same workspace as you')
+@click.option('-a', '--auth', type=str, help='Auth your request')
+@click.command()
+def bulk_transfer_projects(email: str, auth: str, project: list):
+	"""Bulk transfer projects within your workspace"""
+	params = {'userEmail': email,'projectPks': project}
+	query = project_queries.bulk_transfer_project_query
+	r, json_data = utils.make_request(auth, query, params)
+
+	if r.status_code != 200:
+		click.echo('\n' + json_data['data']['bulkTransferProjects']['error']['message'] + '\n')
+	else:
+		data_success = json_data['data']['bulkTransferProjects']['succeeded']
+		data_failed = json_data['data']['bulkTransferProjects']['failed']
+
+		if data_success:
+			click.echo("\nThe following projects were successfully transferred to %s: %s " % (email, data_success))
+
+		if data_failed:
+			click.echo('\nThe following projects were not successfully transferred to %s: ' % (email))
+			for f in data_failed:
+				click.echo("%s  - %s \n" % (f.get('projectPk'), f.get('message')))
+
