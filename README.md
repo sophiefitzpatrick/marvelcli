@@ -35,6 +35,7 @@ You can find out how to use each command with:
 	add-collabs-to-project       Add collaborators to a project
 	add-groups-to-project        Add groups to a project
 	add-members-to-group         Add members to a group
+	bulk-transfer-projects		 Bulk transfer projects within your workspace
 	create-folder                Create a folder
 	create-group                 Create a group
 	create-project               Create a new project
