@@ -1,7 +1,7 @@
 import click
 
-import utils
-from folder import folder_queries
+from marvelcli import utils
+from marvelcli.folder import folder_queries
 
 # Limited by the API to only be able to create folders at the moment.
 

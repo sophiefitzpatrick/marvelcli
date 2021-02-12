@@ -1,8 +1,8 @@
 import click
 import json
 
-import utils
-from project import project_queries
+from marvelcli import utils
+from marvelcli.project import project_queries
 
 @click.option('-p', '--project-pk', type=str, help='Pk of the project you want to delete')
 @click.option('-a', '--auth', type=str, help='Auth your request')
