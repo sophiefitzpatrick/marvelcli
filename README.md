@@ -18,7 +18,10 @@ You will need an access token to use the CLI, generate a new one or find the one
 You can export your token by running this command from the same dir you installed the CLI:
 `export MARVEL_CLI_TOKEN='your access token'`
 
-The CLI will then automatically use this token for each command you run (so you don't have to auth each one individually). Or you can wait until the CLI prompts you for your auth token, then we'll save it for you in the same manner.
+The CLI will then automatically use this token for each command you run (so you don't have to auth each one individually).
+
+To unauth:
+`unset MARVEL_CLI_TOKEN`
 
 ## Example:
 
