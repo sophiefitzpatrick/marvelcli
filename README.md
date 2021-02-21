@@ -5,23 +5,28 @@ A CLI wrapper for Marvelapp (https://marvelapp.com)
 The wrapper will enable you to interact with your Marvel
 account from the comfort of your command line.
 
-To auth each command you'll need to use the `-a` flag with
-your access token.
-
-You can generate a new one or find the one you have
-already set up here: https://marvelapp.com/oauth/devtoken
-
 ## Getting started:
 
 `pip install marvelapp-cli`
 
 https://pypi.org/project/marvelapp-cli/
 
+## Authing requests:
+
+You will need an access token to use the CLI, generate a new one or find the one you already have set up here: https://marvelapp.com/oauth/devtoken
+
+You can export your token by running this command from the same dir you installed the CLI:
+`export MARVEL_CLI_TOKEN='your access token'`
+
+The CLI will then automatically use this token for each command you run (so you don't have to auth each one individually).
+
+Or you can wait until the CLI prompts you for your auth token, then we'll save it for you in the same manner.
+
 ## Example:
 
-To create a project:
+To invite users to your workspace:
 
-	marvelcli create-project --name Rua --password floof --auth [your access token]
+	marvelcli invite-users-to-workspace --email "janis@bigbrotherandtheholdingcompany.com" --email "stevie@fleetwoodmac.com" --email "grace@jeffersonairplane.com"
 
 ## Commands available:
 
@@ -51,8 +56,7 @@ You can find out how to use each command with:
 	update-group-name            Update a group name
 	update-user                  Update your email, username and occuption
 
-## Coming soon:
+## Feature requests
 
-1. Auth the entire session
-2. Command grouping
-3. Comment, screen, usertest commands
+Anything you'd like to see that isn't here?
+Email sophierfitzpatrick@gmail.com with your request!

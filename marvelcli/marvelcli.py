@@ -17,11 +17,13 @@ def marvelcli(args=None):
 	The wrapper will enable you to interact with your Marvel
 	account from the comfort of your command line.
 
-	To auth each command you'll need to use the -a flag with
-	your access token key.
+	You will need an access token to use the CLI, generate a
+	new one or find the one you already have set up here:
+	https://marvelapp.com/oauth/devtoken
 
-	You can generate a new one here or find the one you
-	already have set up: https://marvelapp.com/oauth/devtoken
+	You can export your token by running this command from the
+	same dir you installed the CLI:
+	`export MARVEL_CLI_TOKEN='your access token'`
 
 	"""
 
@@ -53,7 +55,6 @@ marvelcli.add_command(group_commands.update_group_name)
 
 # Folder - limited by the API
 marvelcli.add_command(folder_commands.create_folder)
-
 
 if __name__ == "__main__":
     marvelcli()
