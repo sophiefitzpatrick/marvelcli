@@ -149,15 +149,18 @@ def get_personal_projects(auth: str):
 	"""List all projects owned by you"""
 	query = project_queries.get_all_personal_projects_query
 	r, json_data = utils.make_request(auth, query)
-	data = json_data['data']['user']['projects']['edges']
 
-	urls = []
-	for d in data:
-		url = d['node']['prototypeUrl']
-		urls.append(url)
+	if r.status_code != 200:
+		click.echo('\n' + 'Your personal projects could not be returned at this time."' + '\n')
+	else:
+		data = json_data['data']['user']['projects']['edges']
+		urls = []
+		for d in data:
+			url = d['node']['prototypeUrl']
+			urls.append(url)
 
-	project_count = len(json_data['data']['user']['projects']['edges'])
-	click.echo('\nYou have %s project(s)' % project_count)
+		project_count = len(json_data['data']['user']['projects']['edges'])
+		click.echo('\nYou have %s project(s)' % project_count)
 
-	for url in urls:
-		click.echo(url)
+		for url in urls:
+			click.echo(url)
