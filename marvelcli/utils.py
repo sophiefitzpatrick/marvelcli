@@ -12,8 +12,12 @@ def api_request(access_token, query, params=None):
 def get_access_token(auth=None):
 	if auth:
 		access_token = auth
+		os.environ['MARVEL_CLI_TOKEN'] = access_token
+	elif os.environ.get('MARVEL_CLI_TOKEN'):
+		access_token = os.environ.get('MARVEL_CLI_TOKEN')
 	else:
 		access_token = input("Your auth code: ")
+		os.environ['MARVEL_CLI_TOKEN'] = access_token
 
 	return access_token
 
