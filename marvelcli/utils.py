@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 def api_request(access_token, query, params=None):
 	base_url = 'https://marvelapp.com/graphql'
