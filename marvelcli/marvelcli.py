@@ -43,7 +43,6 @@ marvelcli.add_command(project_commands.remove_groups_from_project)
 marvelcli.add_command(project_commands.add_collabs_to_project)
 marvelcli.add_command(project_commands.remove_collabs_from_project)
 marvelcli.add_command(project_commands.get_personal_projects)
-marvelcli.add_command(project_commands.bulk_transfer_projects)
 
 # Group
 marvelcli.add_command(group_commands.delete_groups)
