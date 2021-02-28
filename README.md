@@ -27,7 +27,7 @@ To unauth:
 
 To invite users to your workspace:
 
-	marvelcli invite-users-to-workspace --email "janis@bigbrotherandtheholdingcompany.com" --email "stevie@fleetwoodmac.com" --email "grace@jeffersonairplane.com"
+	marvelcli add-collabs-to-project --project 12345 --email "janis@bigbrotherandtheholdingcompany.com" --email "stevie@fleetwoodmac.com" --email "grace@jeffersonairplane.com"
 
 ## Commands available:
 
@@ -48,14 +48,11 @@ You can find out how to use each command with:
 	delete-project               Delete a project
 	get-billing-info             Get billing information
 	get-personal-projects        List all projects owned by you
-	invite-users-to-workspace    Invite users to your workspace
 	remove-collabs-from-project  Remove collaborators from a project
 	remove-groups-from-project   Remove groups from a project
 	remove-members-from-group    Remove members from a group
 	remove-users-from-workspace  Remove users from your workspace
-	update-account-password      Update your account password
 	update-group-name            Update a group name
-	update-user                  Update your email, username and occuption
 
 ## Feature requests
 
