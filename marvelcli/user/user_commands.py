@@ -4,41 +4,6 @@ import datetime
 from marvelcli import utils
 from marvelcli.user import user_queries
 
-@click.option('-o', '--old-password', type=str, help='Your old account password')
-@click.option('-n', '--new-password', type=str, help='Your new account password')
-@click.option('-a', '--auth', help='Auth your request')
-@click.command()
-def update_account_password(new_password: str, old_password: str, auth: str):
-	"""Update your account password"""
-	params = {'newPassword': new_password,'oldPassword': old_password}
-	query = user_queries.password_update_query
-	r, json_data = utils.make_request(auth, query, params)
-
-	if r.status_code != 200:
-		click.echo('\n' + json_data['data']['updateUserPassword']['error']['message'] + '\n')
-	else:
-		click.echo("\nYour account updated with the new password successfully!\n")
-
-@click.option('-p', '--password', type=str, help='Your account password to auth the change')
-@click.option('-e', '--email', type=str, help='Your new email address')
-@click.option('-o', '--occupation', type=str, help='Your occupation')
-@click.option('-u', '--username', type=str, help='Your new username')
-@click.option('-a', '--auth', help='Auth your request')
-@click.command()
-def update_user(password: str, occupation: str, email: str, username: str, auth: str):
-	"""Update your email, username and occuption"""
-	params = {'email': email,'username': username,'occupation': occupation,'password': password}
-	query = user_queries.user_update_query
-	r, json_data = utils.make_request(auth, query, params)
-
-	if r.status_code == 200:
-		if not json_data['data']['updateCurrentUser']['ok']:
-			click.echo('\n' + json_data['data']['updateCurrentUser']['error']['message'] + '\n')
-		else:
-			click.echo("\nYour account updated successfully!\n")
-	else:
-		click.echo("\nTry 'marvelcli update_user --help' to make sure you are not missing any args.\n")
-
 @click.option('-a', '--auth', help='Auth your request')
 @click.command()
 def about_user(auth: str):
