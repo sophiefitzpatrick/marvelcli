@@ -4,30 +4,6 @@ import datetime
 from marvelcli import utils
 from marvelcli.workspace import workspace_queries
 
-@click.option('-e', '--email', type=str, multiple=True, help='Use this flag for each email address you want invited to your workspace')
-@click.option('-a', '--auth', type=str, help='Auth your request')
-@click.command()
-def invite_users_to_workspace(email: list, auth: str):
-	"""Invite users to your workspace"""
-	params = {'emails': email, 'role': 'EDITOR'}
-	query = workspace_queries.invite_users_to_workspace_query
-	r, json_data = utils.make_request(auth, query, params)
-
-	if r.status_code != 200:
-		click.echo('\n' + json_data['data']['inviteUsersToWorkspace']['error']['message'] + '\n')
-	else:
-		data_success = json_data['data']['inviteUsersToWorkspace']['succeeded']
-		data_failed = json_data['data']['inviteUsersToWorkspace']['failed']
-
-		if data_success:
-			succeeded = "\nThe following people were successfully invited to your workspace: %s." % ', '.join(data_success)
-			click.echo(succeeded + "They've been assigned the role of 'EDITOR'. \n")
-
-		if data_failed:
-			click.echo('\nThe following people could not be invited to your workspace:')
-			for f in data_failed:
-				click.echo("%s  - '%s'\n" % (f.get('email'), f.get('message')))
-
 @click.option('-e', '--email', type=str, multiple=True, help='Use this flag for each email address you want removed from your workspace')
 @click.option('-a', '--auth', type=str, help='Auth your request')
 @click.command()
