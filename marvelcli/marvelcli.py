@@ -28,14 +28,11 @@ def marvelcli(args=None):
 	"""
 
 # User
-marvelcli.add_command(user_commands.update_account_password)
-marvelcli.add_command(user_commands.update_user)
 marvelcli.add_command(user_commands.about_user)
 
 # Workspace
 marvelcli.add_command(workspace_commands.get_billing_info)
 marvelcli.add_command(workspace_commands.remove_users_from_workspace)
-marvelcli.add_command(workspace_commands.invite_users_to_workspace)
 
 # Project
 marvelcli.add_command(project_commands.delete_project)
@@ -57,4 +54,4 @@ marvelcli.add_command(group_commands.update_group_name)
 marvelcli.add_command(folder_commands.create_folder)
 
 if __name__ == "__main__":
-    marvelcli()
+	marvelcli()

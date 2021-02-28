@@ -53,16 +53,8 @@ def about_user(auth: str):
 		last_active = user['lastActiveAt']
 		last_active = datetime.datetime(int(last_active[0:4]), int(last_active[5:7]), int(last_active[8:10]), 0, 0)
 
-		click.echo(utils.colour.BOLD + '\nYour Account: \n' + utils.colour.END)
+		click.echo(utils.colour.BOLD + '\nYour Account:' + utils.colour.END)
 		click.echo('Email: %s' % user['email'])
 		click.echo('Last Active: %s' % last_active)
-		click.echo('Has Password: %s' % user['hasPassword'] )
 		click.echo('Status: %s' % user['status'])
-		click.echo('Username: %s' % user['username'])
-		click.echo(utils.colour.BOLD + '\nYour Statistics: \n' + utils.colour.END)
-		click.echo('Number of Folders created by you: %s' % user['properties']['foldersOwnedCount'])
-		click.echo('Number of Hotspots created by you: %s' % user['properties']['hotspotsOwnedCount'])
-		click.echo('Number of Projects created by you: %s' % user['properties']['prototypeProjectsOwnedCount'])
-		click.echo('Number of Groups created by you: %s' % user['properties']['teamsOwnedCount'])
-		click.echo('Number of Screens created by you: %s' % user['properties']['screensOwnedCount'])
-		click.echo('Number of Usertest Projects created by you: %s\n' % user['properties']['userTestProjectsOwnedCount'])
+		click.echo('Username: %s \n' % user['username'])
